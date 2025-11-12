@@ -12,7 +12,6 @@ if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir, { recursive: true });
   console.log('Created data directory:', dataDir);
 }
-
 // Generate cookie secret if missing
 if (!fs.existsSync(secretPath)) {
   const secret = crypto.randomBytes(32).toString('hex');
